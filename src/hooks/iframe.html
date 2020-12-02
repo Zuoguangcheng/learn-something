@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子页面</title>
+</head>
+<body>
+    <script>
+        window.onmessage = function(e) {
+            console.log(e.origin);
+            console.log(window.parent === top);
+            console.log(e.source === window.parent);
+            e.source.postMessage(e.data, e.origin);
+        }
+
+        // window.addEventListener('message', function (event) {
+        //     if (window.parent !== event.source) { return }
+        //     console.log(event);
+        //     // document.getElementById('message').innerHTML = "收到"
+        //     //     + event.origin + "消息：" + event.data;
+        //     // 想父发送消息，内容高度
+        //     // top.postMessage(document.body.scrollHeight, 'http://a.com/main.html')
+        // }, false);
+
+    </script>
+</body>
+</html>

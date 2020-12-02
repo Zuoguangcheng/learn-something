@@ -1,0 +1,49 @@
+import React, { useState, useEffect } from "react";
+
+
+function App() {
+    const [randomNumber, setRandomNumber] = useState();
+    const [isLoading, setIsLoading] = useState(false);
+
+    function fetchRandom() {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+            setRandomNumber((Math.random() * 100) | 0);
+        }, 2000);
+    }
+
+    function handleClick() {
+        if (isLoading) return;
+        fetchRandom();
+    }
+
+    function handleDocumentScroll() {
+        //do somethings
+    }
+
+    useEffect(() => {
+        document.title = `randomNumber  is ${randomNumber}`;
+    }, [randomNumber]);
+
+    useEffect(() => {
+        document.addEventListener("scroll", handleDocumentScroll);
+        return () => {
+            document.removeEventListener("scroll", handleDocumentScroll);
+        };
+    }, []);
+
+    return (
+        <div>
+            <h1>functional component</h1>
+            {randomNumber !== undefined ? <>randomNumber: {randomNumber}</> : null}
+            <br />
+            <button onClick={handleClick}>
+                {isLoading ? "loading..." : "refresh"}
+            </button>
+        </div>
+    );
+}
+
+
+export default App;

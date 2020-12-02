@@ -1,0 +1,50 @@
+https://zhuanlan.zhihu.com/p/37148975
+☐ loading config
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
+// 读取写好的 loading 态的 html 和 css
+var loading = {
+    html: fs.readFileSync(path.join(__dirname, './loading.html')),
+    css: '<style>' + fs.readFileSync(path.join(__dirname, './loading.css')) + '</style>'
+}
+
+var webpackConfig = {
+  entry: 'index.js',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index_bundle.js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'xxxx.html',
+      template: 'template.html',
+      loading: loading
+    })
+  ]
+};
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= htmlWebpackPlugin.options.loading.css %>
+    </head>
+
+    <body>
+        <div id="root">
+            <%= htmlWebpackPlugin.options.loading.html %>
+        </div>
+    </body>
+</html>
+
+☐ 使用 prerender-spa-plugin 渲染首屏
+☐ 除掉外链 css
+☐ https://cdn.polyfill.io/v2/polyfill.js
+☐ LazyLoad https://link.zhihu.com/?target=https%3A//github.com/jasonslyvia/react-lazyload
+☐ placeholder
+☐ type=module https://philipwalton.com/articles/deploying-es2015-code-in-production-today/
+https://github.com/philipwalton/webpack-esnext-boilerplate/blob/master/tasks/bundles.js
+
+每个支持的浏览器<script type="module">还支持异步/等待
+每个支持的浏览器<script type="module">也都支持Classes。
+每个支持的浏览器<script type="module">还支持箭头功能。
+每个支持的浏览器<script type="module">还支持fetch，Promises，Map和Set等等

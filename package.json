@@ -1,0 +1,45 @@
+{
+  "name": "react-router-sound-code",
+  "version": "1.0.0",
+  "description": "read react-router-sound-code",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
+    "dev": "rm -rf ./dist & cross-env NODE_ENV=development webpack --mode development",
+    "build": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production",
+    "babel": "rm -rf ./dist && babel src/index.js src/x.js src/y.js --out-dir dist"
+  },
+  "keywords": [
+    "react-router-source-code",
+    "webpack4"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "core-js": "^3.6.5",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/runtime-corejs3": "^7.9.6",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-try-catch-auto": "^2.4.6",
+    "babel-preset-react-app": "^9.1.1",
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "webpack": "^4.41.6",
+    "webpack-build-notifier": "^2.0.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
