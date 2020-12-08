@@ -2,4 +2,5 @@
 
 // import './history';
 // import './app';
-import './redux'
+import './redux-new'
+// import './react-d'
