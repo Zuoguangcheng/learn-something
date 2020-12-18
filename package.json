@@ -7,7 +7,8 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
     "dev": "rm -rf ./dist & cross-env NODE_ENV=development webpack --mode development",
     "build": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production",
-    "babel": "rm -rf ./dist && babel src/index.js src/x.js src/y.js --out-dir dist"
+    "babel": "rm -rf ./dist && babel src/index.js src/x.js src/y.js --out-dir dist",
+    "testPromise": "promises-aplus-tests promise/index.js"
   },
   "keywords": [
     "react-router-source-code",
@@ -37,6 +38,7 @@
     "cross-env": "^7.0.2",
     "html-webpack-plugin": "^3.2.0",
     "prerender-spa-plugin": "^3.4.0",
+    "promises-aplus-tests": "^2.1.2",
     "webpack": "^4.41.6",
     "webpack-build-notifier": "^2.0.0",
     "webpack-cli": "^3.3.11",
