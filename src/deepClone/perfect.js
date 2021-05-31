@@ -18,6 +18,16 @@ const deepClone = function (obj, hash = new WeakMap()) {
     // 示例：var a = new Set([1,3]); var b = new Set(a);
     if (type.includes(obj.constructor)) return new obj.constructor(obj);
     
+
+    /**
+     * 原型属性方法 可以通过这种形式来获取
+     * 
+     *function getInit(target) {
+       let Ctor = target.constructor;
+
+        return new Ctor;
+        } 
+     */
     // Object.getOwnPropertyDescriptors() 方法用来获取一个对象的所有自身属性的描述符
     // Object.assign() 方法只能拷贝源对象的可枚举的自身属性，同时拷贝时无法拷贝属性的特性们，而且访问器set get属性会被转换成数据属性，也无法拷贝源对象的原型
     // form: <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors>

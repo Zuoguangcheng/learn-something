@@ -1,5 +1,5 @@
 /**
- * @fileoverview 
+ * @fileoverview
  * @author liuduan
  * @Date 2020-05-20 10:50:05
  * @LastEditTime 2020-06-20 23:11:41
@@ -24,6 +24,8 @@ import DemoClass from './demo/class.js';
 import DemoFunc from './demo/functional.js';
 import DemoHoc from './demo/hoc.js';
 import DemoRender from './demo/render-props.js';
+
+import MyHooks from './hooks/my'
 // window.addEventListener('popstate', handlePop);
 // function handlePop(event) {
 //     console.warn("location: " + document.location + ", state: " + JSON.stringify(event.state));
@@ -39,8 +41,12 @@ ReactDOM.render(
         <Switch>
 
             <Route path="/a" component={App} />
+            <Route path="/hooks" component={MyHooks} />
+
             <Route path="/b" component={Bpp} exact strict sensitive />
             <Route path="/c/:type(view|edit)/:id(\d+)?" component={Cpp} exact strict sensitive></Route>
+
+
 
             {/* demo */}
             {/* <Route path="/demo/class" component={DemoClass} />
