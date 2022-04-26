@@ -29,4 +29,3 @@ function myNew(parent, ...res) {
 
   return typeof result === 'object' ? result : obj;
 }
-
