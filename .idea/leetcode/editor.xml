@@ -36,6 +36,50 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[108]将有序数组转换为二叉搜索树.js">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[108]将有序数组转换为二叉搜索树.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com108" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[108]将有序数组转换为二叉搜索树.js" />
+              <option name="titleSlug" value="convert-sorted-array-to-binary-search-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[110]平衡二叉树.js">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[110]平衡二叉树.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com110" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[110]平衡二叉树.js" />
+              <option name="titleSlug" value="balanced-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[111]二叉树的最小深度.js">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[111]二叉树的最小深度.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com111" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[111]二叉树的最小深度.js" />
+              <option name="titleSlug" value="minimum-depth-of-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1547]切棍子的最小成本.js">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/doc/content/[1547]切棍子的最小成本.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com1547" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../leetcode/leetcode/editor/cn/[1547]切棍子的最小成本.js" />
+              <option name="titleSlug" value="minimum-cost-to-cut-a-stick" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
