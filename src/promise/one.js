@@ -66,3 +66,79 @@ p.then((res) => {
 }).then(() => {
     console.log('jsliang'); // jsliang
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const PENDING = 'pending';
+const RESOLVE = 'resolve';
+const REJECT = 'reject';
+
+
+function myPromise(fn) {
+  const that = this;
+  that.status = PENDING;
+  that.value = '';
+  that.reason = '';
+
+  that.resolveCbList = [];
+  that.rejectCbList = [];
+
+  function resolveFn(value) {
+    if(that.status === PENDING) {
+      that.status = RESOLVED;
+      that.value = value;
+      that.resolveCbList.forEach(cb => {
+        that.value = cb(that.value)
+      })
+    }
+  }
+
+  function rejectFn(value) {
+    if(that.status === PENDING) {
+      that.status = RESOLVED;
+      that.value = value;
+      that.resolveCbList.forEach(cb => cb(value))
+    }
+  }
+
+  try {
+    fn(resolveFn, rejectFn);
+  }catch (e) {
+    rejectFn(e);
+  }
+}
+
+myPromise.prototype.then = function (onResolve, onReject) {
+  const that = this;
+  if(that.status === PENDING) {
+    that.resolveCbList.push(onResolve);
+    that.rejectCbList.push(onReject);
+  }
+
+  if(that.status === REJECT) {
+    onReject(that.reason);
+  }
+
+  if(that.status === RESOLVE) {
+    onResolve(that.value);
+  }
+
+  return that;
+}
+

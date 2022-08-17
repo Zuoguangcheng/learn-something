@@ -17,7 +17,6 @@ function objectFactory(Parent, ...res) {
 
 
 
-
 function myNew(parent, ...res) {
   let obj = {};
 
@@ -29,3 +28,4 @@ function myNew(parent, ...res) {
 
   return typeof result === 'object' ? result : obj;
 }
+

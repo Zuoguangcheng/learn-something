@@ -147,7 +147,7 @@
 // 7.
 
 
-const promise1 = new Promise((resolve, reject) => {
+/*const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('success')
   }, 1000)
@@ -160,5 +160,32 @@ console.log('promise2', promise2)
 setTimeout(() => {
   console.log('promise1', promise1)
   console.log('promise2', promise2)
-}, 2000)
+}, 2000)*/
+
+
+/*async function async1() {
+  await Promise.reject('error').catch(e => console.log('e', e));
+  await Promise.resolve('1').then(res => {console.log('res', res); return 2}).then(res => console.log('res1', res))
+  console.log('async1');
+  return Promise.resolve('async success')
+}
+
+async1().then(res => console.log('res'));
+console.log('script start')*/
+
+
+
+/*new Promise((resolve, reject) => {
+  reject(1)
+}).catch(error => {
+  console.log('error', error);
+  return 2
+}).finally(res => {
+  console.log('finally', res);
+  return 3
+}).then(res => console.log('res', res))*/
+
+
+
+
 
