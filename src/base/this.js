@@ -1,3 +1,5 @@
+// https://zhuanlan.zhihu.com/p/90833853
+
 /*
 *
 * 首先必须要说的是，this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁。
@@ -130,3 +132,4 @@ obj.fn();
  * 在这个例子上， setTimeout 的上层作用域是 fn 。而 fn 里面的 this 指向 obj ，所以 setTimeout 里面的箭头函数的 this ，指向 obj 。
  * 所以输出 程新松。
  * */
+

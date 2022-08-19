@@ -35,7 +35,6 @@ import MyHooks from './hooks/my'
 // });
 
 
-
 ReactDOM.render(
     <BrowserRouter basename="/basename">
         <Switch>
